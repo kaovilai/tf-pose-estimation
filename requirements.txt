@@ -11,3 +11,7 @@ scipy
 slidingwindow
 tqdm
 git+https://github.com/ppwwyyxx/tensorpack.git
+# --extra-index-url https://pypi.ngc.nvidia.com
+nvidia-pyindex
+nvidia-tensorrt
+tf_slim

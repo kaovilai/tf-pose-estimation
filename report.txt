@@ -1,0 +1,38 @@
+TensorFlow 2.0 Upgrade Script
+-----------------------------
+Converted 1 files
+Detected 2 issues that require attention
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+File: ./tf_pose/estimator.py
+--------------------------------------------------------------------------------
+./tf_pose/estimator.py:342:33: WARNING: tf.image.resize_area called with align_corners argument, requires manual check: align_corners is not supported by tf.image.resize, the new default transformation is close to what v1 provided. If you require exactly the same transformation as before, use compat.v1.image.resize_area.
+./tf_pose/estimator.py:344:32: WARNING: tf.image.resize_area called with align_corners argument, requires manual check: align_corners is not supported by tf.image.resize, the new default transformation is close to what v1 provided. If you require exactly the same transformation as before, use compat.v1.image.resize_area.
+================================================================================
+Detailed log follows:
+
+================================================================================
+--------------------------------------------------------------------------------
+Processing file './tf_pose/estimator.py'
+ outputting to './tf_pose/estimator.py.new'
+--------------------------------------------------------------------------------
+
+311:13: INFO: Renamed 'tf.gfile.GFile' to 'tf.io.gfile.GFile'
+312:24: INFO: Renamed 'tf.GraphDef' to 'tf.compat.v1.GraphDef'
+330:21: INFO: Renamed 'tf.get_default_graph' to 'tf.compat.v1.get_default_graph'
+332:31: INFO: Renamed 'tf.Session' to 'tf.compat.v1.Session'
+334:35: INFO: Renamed 'tf.get_default_graph' to 'tf.compat.v1.get_default_graph'
+341:29: INFO: Renamed 'tf.placeholder' to 'tf.compat.v1.placeholder'
+342:33: WARNING: tf.image.resize_area called with align_corners argument, requires manual check: align_corners is not supported by tf.image.resize, the new default transformation is close to what v1 provided. If you require exactly the same transformation as before, use compat.v1.image.resize_area.
+342:33: INFO: Changed tf.image.resize_area call to tf.image.resize(..., method=tf.image.ResizeMethod.AREA).
+344:32: WARNING: tf.image.resize_area called with align_corners argument, requires manual check: align_corners is not supported by tf.image.resize, the new default transformation is close to what v1 provided. If you require exactly the same transformation as before, use compat.v1.image.resize_area.
+344:32: INFO: Changed tf.image.resize_area call to tf.image.resize(..., method=tf.image.ResizeMethod.AREA).
+352:31: INFO: Added keywords to args of function 'tf.nn.pool'
+353:28: INFO: Renamed 'tf.where' to 'tf.compat.v1.where'
+359:33: INFO: Renamed 'tf.variables_initializer' to 'tf.compat.v1.variables_initializer'
+360:24: INFO: Renamed 'tf.global_variables' to 'tf.compat.v1.global_variables'
+362:63: INFO: Renamed 'tf.report_uninitialized_variables' to 'tf.compat.v1.report_uninitialized_variables'
+396:16: INFO: Renamed 'tf.profiler.profile' to 'tf.compat.v1.profiler.profile'
+396:56: INFO: Renamed 'tf.profiler.ProfileOptionBuilder' to 'tf.compat.v1.profiler.ProfileOptionBuilder'
+--------------------------------------------------------------------------------
+
